@@ -19,3 +19,8 @@
 
 # Go workspace file
 go.work
+
+# Unnecessary files
+docs
+address.txt
+.env
