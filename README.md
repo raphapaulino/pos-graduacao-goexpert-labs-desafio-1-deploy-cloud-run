@@ -32,17 +32,21 @@
 
 ### PRÉ-REQUISITOS
 
-#### 1. Instalar o GO no sistema operacional.
+#### 1. Instalar o GO no sistema operacional:
 
-É possível encontrar todas as instruções de como baixar e instalar o GO nos sistemas operacionais Windows, Mac ou Linux [aqui](https://go.dev/doc/install).
+É possível encontrar todas as instruções de como baixar e instalar o `GO` nos sistemas operacionais Windows, Mac ou Linux [aqui](https://go.dev/doc/install).
 
-#### 2. Clonar o repositório:
+#### 2. Instalar o Git no sistema operacional:
+
+É possível encontrar todas as instruções de como baixar e instalar o `Git` nos sistemas operacionais Windows, Mac ou Linux [aqui](https://www.git-scm.com/downloads).
+
+#### 3. Clonar o repositório:
 
 ```
 git clone git@github.com:raphapaulino/pos-graduacao-goexpert-labs-desafio-1-deploy-cloud-run.git
 ```
 
-#### 3. (Opcional) Instalar o Docker no sistema operacional:
+#### 4. (Opcional) Instalar o Docker no sistema operacional:
 
 É possível encontrar todas as instruções de como baixar e instalar o Docker nos sistemas operacionais Windows, Mac ou Linux [aqui](https://docs.docker.com/engine/install/).
 
