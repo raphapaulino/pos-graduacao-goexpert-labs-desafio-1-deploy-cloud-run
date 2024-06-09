@@ -6,13 +6,11 @@ import (
 	"log"
 	"net/http"
 	"net/url"
-	"os"
 	"regexp"
 	"strconv"
 
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/chi/v5"
-	"github.com/joho/godotenv"
 )
 
 var VIA_CEP_API_BASE_URL = "https://viacep.com.br/ws"
@@ -49,10 +47,10 @@ type TemperatureResponse struct {
 }
 
 func main() {
-	err := godotenv.Load(".env")
-	if err != nil {
-		log.Fatalf("Error loading .env file: %s", err)
-	}
+	// err := godotenv.Load(".env")
+	// if err != nil {
+	// 	log.Fatalf("Error loading .env file: %s", err)
+	// }
 
 	r := chi.NewRouter()
 
@@ -65,7 +63,7 @@ func main() {
 	})
 
 	fmt.Println("Server running on port 8080")
-	err = http.ListenAndServe(":8080", r)
+	err := http.ListenAndServe(":8080", r)
 	checkErr(err)
 }
 
@@ -142,7 +140,8 @@ func getWeather(city string) (*WeatherResponse, error) {
 	fmt.Println("Cidade:", city)
 	cleanedCity := replaceSpecialCharacters(city) // to deal with strings, for example, like "Ribeirão Preto" or "São Simão"
 	cityEncoded := url.QueryEscape(cleanedCity)
-	weatherApiKey := os.Getenv("WEATHER_API_KEY")
+	// weatherApiKey := os.Getenv("WEATHER_API_KEY")
+	weatherApiKey := "cbca91bf0fb24a7c97835630240205"
 
 	url := fmt.Sprintf("%s/current.json?key=%s&q=%s&aqi=no", WEATHER_API_BASE_URL, weatherApiKey, cityEncoded)
 
