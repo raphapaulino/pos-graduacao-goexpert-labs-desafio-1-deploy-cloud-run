@@ -109,6 +109,15 @@ Obs.: Para parar a execução da aplicação, basta voltar ao terminal (no diret
 docker-compose down
 ```
 
+3. Caso seja exibido o erro `can not find zipcode`, basta parar a execução da aplicação com o comando `docker-compose down` e executar:
+
+```
+docker compose build --no-cache
+```
+
+Em seguida, subir o container novamente com o comando `docker-compose up -d` e acessar o endereço informado anteriormente junto com o cep que queira testar como `http://localhost:8080/14055560`, por exemplo.
+
+
 #### Online via Google Cloud Run
 
 Informar o CEP desejado no endereço abaixo conforme o exemplo:
